@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct ProjectJson {
     pub id: i64,
     pub name: String,
@@ -8,12 +8,12 @@ pub struct ProjectJson {
     pub updated_at: i64,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct ProjectBody {
     pub project: ProjectJson,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct CreateProject {
     pub name: String,
 }
