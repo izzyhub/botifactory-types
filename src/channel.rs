@@ -1,3 +1,4 @@
+use alloc::string::String;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -21,9 +22,7 @@ pub struct CreateChannel {
 }
 
 impl CreateChannel {
-    pub fn new(channel_name: &str) -> Self {
-        CreateChannel {
-            channel_name: channel_name.to_string(),
-        }
+    pub fn new(channel_name: String) -> Self {
+        CreateChannel { channel_name }
     }
 }

@@ -4,9 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+heapless = "0.8.0"
 serde = { version = "1.0.217", default-features = false, features = [
   "derive",
   "alloc",
 ] }
 serde-json-core = "0.6.0"
-#display_json = "0.2.1"

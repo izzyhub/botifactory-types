@@ -1,3 +1,4 @@
+use alloc::string::String;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -19,18 +20,16 @@ pub struct CreateProject {
 }
 
 impl CreateProject {
-    pub fn new(name: &str) -> Self {
-        CreateProject {
-            name: name.to_string(),
-        }
+    pub fn new(name: String) -> Self {
+        CreateProject { name }
     }
 }
 
 impl ProjectJson {
-    pub fn new(id: i64, name: &str, created_at: i64, updated_at: i64) -> Self {
+    pub fn new(id: i64, name: String, created_at: i64, updated_at: i64) -> Self {
         ProjectJson {
             id,
-            name: name.to_string(),
+            name,
             created_at,
             updated_at,
         }

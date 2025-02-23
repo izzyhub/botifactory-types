@@ -1,3 +1,7 @@
+#![no_std]
+
+extern crate alloc;
+
 pub mod channel;
 pub mod project;
 pub mod release;
