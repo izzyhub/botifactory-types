@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 heapless = "0.8.0"
+semver = { version = "1.0.25", default-features = false, features = ["serde"] }
 serde = { version = "1.0.217", default-features = false, features = [
   "derive",
   "alloc",
