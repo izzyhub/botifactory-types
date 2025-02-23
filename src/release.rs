@@ -5,7 +5,7 @@ use serde::{Deserialize, Serialize};
 pub struct ReleaseResponse {
     pub id: i64,
     pub version: String,
-    pub hash: Vec<u8>,
+    pub hash: String,
     pub created_at: i64,
     pub updated_at: i64,
 }
