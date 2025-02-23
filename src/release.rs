@@ -1,7 +1,6 @@
-use display_json::DisplayAsJsonPretty;
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize, Clone, DisplayAsJsonPretty)]
+#[derive(Serialize, Deserialize, Clone)]
 pub struct ReleaseResponse {
     pub id: i64,
     pub version: String,
@@ -10,7 +9,7 @@ pub struct ReleaseResponse {
     pub updated_at: i64,
 }
 
-#[derive(Serialize, Deserialize, DisplayAsJsonPretty)]
+#[derive(Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct ReleaseBody {
     pub release: ReleaseResponse,

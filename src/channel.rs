@@ -1,13 +1,12 @@
-use display_json::DisplayAsJsonPretty;
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize, DisplayAsJsonPretty)]
+#[derive(Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct ChannelBody {
     pub channel: ChannelJson,
 }
 
-#[derive(Serialize, Deserialize, DisplayAsJsonPretty)]
+#[derive(Serialize, Deserialize)]
 pub struct ChannelJson {
     pub id: i64,
     pub name: String,
